@@ -10,7 +10,7 @@ public class Aluno {
     private String cpf;
 
     public String toString() {
-        return "Nome do aluno: "+nome+", Matrícula do aluno: "+matricula+" e CPF do aluno: "+cpf+".";
+        return "Nome do aluno: "+nome+" ";
     }
 
     public boolean equals(Object obj) {

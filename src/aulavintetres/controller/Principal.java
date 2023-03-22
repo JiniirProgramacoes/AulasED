@@ -3,23 +3,24 @@ package aulavintetres.controller;
 import aulavintetres.Aluno;
 import aulavintetres.collection.ColecaoAluno;
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Principal {
     
     public static void main(String[] args) {
-        Aluno aluno1 = new Aluno(1,"Miguel","202310070000","111.111.111-22");
-        Aluno aluno2 = new Aluno();
         ColecaoAluno colAluno = new ColecaoAluno();
+        Scanner scan = new Scanner(System.in);
         
-        aluno2.setId(2);
-        aluno2.setNome("Afonso");
-        aluno2.setMatricula("202310070001");
-        aluno2.setCpf("222.222.222-11");
-        
-        colAluno.ArmazenarAluno(aluno1);
-        colAluno.ArmazenarAluno(aluno2);
-        colAluno.ArmazenarAluno(aluno2);
-        
+        for(int i = 0; i < 3; i++){
+            Aluno alunoNovo = new Aluno();
+            System.out.println("Escreva o nome:");
+            alunoNovo.setNome(scan.nextLine());
+            System.out.println("Escreva a matricula:");
+            alunoNovo.setMatricula(scan.nextLine());
+            System.out.println("Escreva o cpf:");
+            alunoNovo.setCpf(scan.nextLine());
+            colAluno.ArmazenarAluno(alunoNovo);
+        }  
         
         System.out.println(Arrays.toString(colAluno.getAluno()));
     }

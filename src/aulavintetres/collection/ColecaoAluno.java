@@ -11,7 +11,7 @@ public class ColecaoAluno {
             if(this.aluno[i] == null){
                 this.aluno[i] = aluno;
                 break;
-            }else if(this.aluno[i] == aluno){
+            }else if(this.aluno[i].equals(aluno)){
                 System.out.println("Já foi cadastrado!");
                 break;
             }
